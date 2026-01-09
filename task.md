@@ -10,6 +10,8 @@
 - Fix required: PR #7 wrote literal "\\n" characters into files. Use real newlines; files must be valid TypeScript.
 - Fix required: Tests must run with plain Node (use node:assert/strict). Do not use Jest unless you add the runner (not allowed here).
 - Fix required: Correct test case for LC-560: nums [2,-1,2,-1], k=2 should return 3, not 4.
+- Fix required: Do not use describe/it/test/expect; write standalone Node tests with assert and console output.
+- Fix required: Ensure all solutions export the required functions/classes so tests can import them.
 
 ---
 
