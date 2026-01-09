@@ -1,0 +1,1 @@
+# Two Sum\n\nThis implementation solves the problem of finding two indices of numbers in an array that add up to a specific target.\n\n## Time Complexity\nO(n) - because we traverse the array once, using a hash map for lookup.\n\n## Space Complexity\nO(n) - for storing the hash map of numbers and their indices.\n

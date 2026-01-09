@@ -1,0 +1,1 @@
+# Merge Two Sorted Lists\n\nThis implementation merges two sorted linked lists and returns it as a new sorted list.\n\n## Time Complexity\nO(n + m) - where n and m are the lengths of the two lists.\n\n## Space Complexity\nO(1) for the iterative method, since we are using a dummy node and no additional data structures.\n
