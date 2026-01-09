@@ -8,6 +8,7 @@
 - ONLY modify or create files under problems/**
 - Follow the exact requirements in each task (language, complexity, etc.)
 - Use clear variable names and add comments for time/space complexity
+- solution.ts must export the required function/class (use `export function` / `export class`).
 - Do NOT modify task.md or task descriptions
 - Do NOT create new tasks or change requirements
 
