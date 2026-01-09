@@ -44,6 +44,19 @@ jobs:
 
       - name: Run Codex to implement tasks
         if: steps.check-tasks.outputs.has_todos == 'true'
+        id: codex-run
+        continue-on-error: true
+        uses: openai/codex-action@v1
+        with:
+          openai-api-key: ${{ secrets.OPENAI_API_KEY }}
+          model: gpt-4o-mini
+          prompt-file: .ai/codex.prompt.md
+          output-file: codex-output.md
+          sandbox: workspace-write
+          safety-strategy: drop-sudo
+
+      - name: Retry Codex once on failure
+        if: steps.check-tasks.outputs.has_todos == 'true' && steps.codex-run.outcome == 'failure'
         uses: openai/codex-action@v1
         with:
           openai-api-key: ${{ secrets.OPENAI_API_KEY }}
