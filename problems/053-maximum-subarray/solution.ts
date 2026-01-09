@@ -1,0 +1,1 @@
+function maxSubArray(nums: number[]): number {\n    let maxSoFar = nums[0];\n    let maxEndingHere = nums[0];\n\n    for (let i = 1; i < nums.length; i++) {\n        maxEndingHere = Math.max(nums[i], maxEndingHere + nums[i]);\n        maxSoFar = Math.max(maxSoFar, maxEndingHere);\n    }\n\n    return maxSoFar;\n}\n\n// Time Complexity: O(n)\n// Space Complexity: O(1)

@@ -1,0 +1,1 @@
+function subarraySum(nums: number[], k: number): number {\n    const map = new Map<number, number>();\n    map.set(0, 1);\n    let count = 0, sum = 0;\n\n    for (const num of nums) {\n        sum += num;\n        count += (map.get(sum - k) || 0);\n        map.set(sum, (map.get(sum) || 0) + 1);\n    }\n\n    return count;\n}\n\n// Time Complexity: O(n)\n// Space Complexity: O(n)

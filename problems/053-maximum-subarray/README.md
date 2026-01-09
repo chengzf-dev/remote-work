@@ -1,0 +1,1 @@
+# Maximum Subarray Problem\nThis solution finds the contiguous subarray with the largest sum.\n\n## Approach\n- We implement Kadane's algorithm to keep track of the maximum sum ending at each position.\n- If the sum falls below the current number, we start anew.\n- Keep track of the overall maximum found.\n\n## Complexity\n- Time Complexity: O(n)\n- Space Complexity: O(1)
