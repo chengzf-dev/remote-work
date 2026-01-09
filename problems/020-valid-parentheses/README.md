@@ -1,0 +1,1 @@
+# Files\n- solution.ts\n- solution.test.ts\n\n## Explanation\nThe isValid function checks if the parentheses in a string are valid by using a stack to track opening brackets and matching them with closing brackets.

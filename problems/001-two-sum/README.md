@@ -1,0 +1,1 @@
+# Files\n- solution.ts\n- solution.test.ts\n\n## Explanation\nThe twoSum function takes an array of numbers and a target number. It returns the indices of the two numbers that add up to the target using a hash map for efficient lookup.
