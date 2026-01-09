@@ -1,0 +1,1 @@
+// Files\n- solution.ts\n- solution.test.ts\n\n# Two Sum\nFind two numbers that add up to a target number.\nThe function should return their indices.\n\nExample:\nInput: nums = [2, 7, 11, 15], target = 9\nOutput: [0, 1]
