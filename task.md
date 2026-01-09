@@ -12,6 +12,7 @@
 - Fix required: Correct test case for LC-560: nums [2,-1,2,-1], k=2 should return 3, not 4.
 - Fix required: Do not use describe/it/test/expect; write standalone Node tests with assert and console output.
 - Fix required: Ensure all solutions export the required functions/classes so tests can import them.
+- Fix required: LC-001 twoSum must return [] when no solution; do not throw.
 
 ---
 
@@ -27,6 +28,7 @@
   - Handle duplicate values correctly
   - Include time & space complexity comments
   - Add at least 4 test cases (including duplicates, no solution, negatives, minimal length)
+  - For the "no solution" case, return [] (do not throw)
 
 ---
 
