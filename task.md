@@ -39,19 +39,17 @@ runTest('sample', [[2, 7, 11, 15], 9], [0, 1]);
 ## Tasks
 
 ### LC-001 Two Sum
-- Status: TODO
+- Status: DONE
 - Path: problems/001-two-sum
-- Completed: 2026-01-07
+- Completed: 2026-01-10
 - Notes: Hash map O(n) solution with corrected test cases
-- Fix: Use real newlines (no literal "\\n") in solution.ts, solution.test.ts, README.md; ensure README.md includes a "Files" section listing solution.ts and solution.test.ts
 
 ---
 
 ### LC-020 Valid Parentheses
-- Status: TODO
+- Status: DONE
 - Path: problems/020-valid-parentheses
-- Completed: 2026-01-07
+- Completed: 2026-01-10
 - Notes: Stack-based O(n) solution with 5 comprehensive test cases
-- Fix: Use real newlines (no literal "\\n") in solution.ts, solution.test.ts, README.md; ensure solution.ts exports isValid; include 5 comprehensive test cases; correctly handle closing brackets (do not ignore ')', ']', '}')
 
 <!-- Trigger workflow (15) -->   
