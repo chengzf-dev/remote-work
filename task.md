@@ -9,6 +9,19 @@
 
 ## Tasks
 
+### LC-001 Two Sum
+- Status: TODO
+- Path: problems/001-two-sum
+- Requirements:
+  - TypeScript
+  - Use a hash map for O(n) time
+  - Return indices of the two numbers that add up to target
+  - Handle duplicate values correctly
+  - Include time & space complexity comments
+  - Add at least 4 test cases (including duplicates, no solution, negatives, minimal length)
+
+---
+
 ### LC-021 Merge Two Sorted Lists
 - Status: TODO
 - Path: problems/021-merge-two-sorted-lists
