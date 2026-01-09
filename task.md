@@ -7,6 +7,9 @@
 - Fix required: previous PR only added codex-output.md; you must generate solution files under problems/** for every TODO task
 - Fix required: PR #3 still only added codex-output.md; do not open a PR without problems/** solutions
 - Fix required: PR #4 added empty 0-byte solution files. Implement real code + tests; empty files are not acceptable.
+- Fix required: PR #7 wrote literal "\\n" characters into files. Use real newlines; files must be valid TypeScript.
+- Fix required: Tests must run with plain Node (use node:assert/strict). Do not use Jest unless you add the runner (not allowed here).
+- Fix required: Correct test case for LC-560: nums [2,-1,2,-1], k=2 should return 3, not 4.
 
 ---
 
