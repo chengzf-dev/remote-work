@@ -6,6 +6,7 @@
 - DeepSeek supervisor (this project) is responsible for reviewing Codex PRs
 - Fix required: previous PR only added codex-output.md; you must generate solution files under problems/** for every TODO task
 - Fix required: PR #3 still only added codex-output.md; do not open a PR without problems/** solutions
+- Fix required: PR #4 added empty 0-byte solution files. Implement real code + tests; empty files are not acceptable.
 
 ---
 
