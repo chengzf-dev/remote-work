@@ -1,0 +1,1 @@
+# Files\n- solution.ts\n- solution.test.ts\n\n## Explanation\nThis solution uses a hash map to store values and their indices.\nIt efficiently finds the indices of the two numbers that sum up to the target value with O(n) time complexity and O(n) space complexity.

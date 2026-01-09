@@ -1,0 +1,1 @@
+# Files\n- solution.ts\n- solution.test.ts\n\n## Explanation\nThis solution uses a stack to validate parentheses by pushing opening characters\nand popping them when matching closing characters are found.
