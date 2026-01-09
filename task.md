@@ -13,6 +13,8 @@
 - Fix required: Do not use describe/it/test/expect; write standalone Node tests with assert and console output.
 - Fix required: Ensure all solutions export the required functions/classes so tests can import them.
 - Fix required: LC-001 twoSum must return [] when no solution; do not throw.
+- Fix required: README file lists must name actual files (solution.ts, solution.test.ts), not placeholders.
+- Fix required: solution.ts must include time/space complexity comments per task requirements.
 
 ---
 
