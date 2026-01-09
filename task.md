@@ -4,6 +4,7 @@
 - Codex must complete ALL tasks with status TODO
 - Codex must NOT touch tasks marked DONE
 - DeepSeek supervisor (this project) is responsible for reviewing Codex PRs
+- Fix required: previous PR only added codex-output.md; you must generate solution files under problems/** for every TODO task
 
 ---
 
