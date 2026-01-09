@@ -5,13 +5,14 @@ on:
     branches: [main]
     paths:
       - 'task.md'
-  pull_request:
+  pull_request_target:
     types: [closed]
   workflow_dispatch:
 
 jobs:
   codex-solve-tasks:
     runs-on: ubuntu-latest
+    if: ${{ github.event_name != 'pull_request_target' || github.event.pull_request.merged == false }}
 
     permissions:
       contents: write
