@@ -39,7 +39,7 @@ runTest('sample', [[2, 7, 11, 15], 9], [0, 1]);
 ## Tasks
 
 ### LC-001 Two Sum
-- Status: DONE
+- Status: TODO
 - Path: problems/001-two-sum
 - Completed: 2026-01-07
 - Notes: Hash map O(n) solution with corrected test cases
@@ -47,7 +47,7 @@ runTest('sample', [[2, 7, 11, 15], 9], [0, 1]);
 ---
 
 ### LC-020 Valid Parentheses
-- Status: DONE
+- Status: TODO
 - Path: problems/020-valid-parentheses
 - Completed: 2026-01-07
 - Notes: Stack-based O(n) solution with 5 comprehensive test cases
