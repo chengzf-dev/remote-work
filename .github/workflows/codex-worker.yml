@@ -53,13 +53,40 @@ jobs:
           sandbox: workspace-write
           safety-strategy: drop-sudo
 
+      - name: Validate generated solutions
+        if: steps.check-tasks.outputs.has_todos == 'true'
+        run: |
+          set -euo pipefail
+
+          mapfile -t TASK_PATHS < <(awk '/^- Path: /{print $3}' task.md)
+
+          if [ "${#TASK_PATHS[@]}" -eq 0 ]; then
+            echo "No task paths found in task.md"
+            exit 1
+          fi
+
+          for path in "${TASK_PATHS[@]}"; do
+            solution="${path}/solution.ts"
+            test="${path}/solution.test.ts"
+
+            if [ ! -s "$solution" ]; then
+              echo "Missing or empty file: $solution"
+              exit 1
+            fi
+
+            if [ ! -s "$test" ]; then
+              echo "Missing or empty file: $test"
+              exit 1
+            fi
+          done
+
       - name: Commit Codex solutions
         if: steps.check-tasks.outputs.has_todos == 'true'
         run: |
           git config user.name "Codex Bot"
           git config user.email "codex@openai.com"
 
-          git add -A
+          git add problems/ codex-output.md
 
           if ! git diff --cached --quiet; then
             git commit -m "🤖 Codex: Implement TODO tasks
