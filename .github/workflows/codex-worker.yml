@@ -57,6 +57,13 @@ jobs:
         if: steps.check-tasks.outputs.has_todos == 'true'
         run: |
           set -euo pipefail
+          if command -v rg >/dev/null 2>&1; then
+            search() { rg -n "$@"; }
+            search_quiet() { rg -n "$@" >/dev/null; }
+          else
+            search() { grep -n -E "$@"; }
+            search_quiet() { grep -n -E "$@" >/dev/null; }
+          fi
 
           mapfile -t TASK_PATHS < <(awk '/^- Path: /{print $3}' task.md)
 
@@ -68,6 +75,7 @@ jobs:
           for path in "${TASK_PATHS[@]}"; do
             solution="${path}/solution.ts"
             test="${path}/solution.test.ts"
+            readme="${path}/README.md"
 
             if [ ! -s "$solution" ]; then
               echo "Missing or empty file: $solution"
@@ -76,6 +84,46 @@ jobs:
 
             if [ ! -s "$test" ]; then
               echo "Missing or empty file: $test"
+              exit 1
+            fi
+
+            if [ ! -s "$readme" ]; then
+              echo "Missing or empty file: $readme"
+              exit 1
+            fi
+
+            if search '\\\\n' "$solution" "$test" "$readme"; then
+              echo "Found literal \\n escape sequences in files under $path"
+              exit 1
+            fi
+
+            if ! search_quiet "node:assert/strict" "$test"; then
+              echo "Tests must import node:assert/strict: $test"
+              exit 1
+            fi
+
+            if search "from ['\\\"]assert['\\\"]" "$test"; then
+              echo "Tests must not import from 'assert': $test"
+              exit 1
+            fi
+
+            if search "describe\\(" "$test" || search "it\\(" "$test" || search "test\\(" "$test" || search "expect\\(" "$test"; then
+              echo "Tests must not use a test runner API: $test"
+              exit 1
+            fi
+
+            if ! search_quiet "from ['\\\"]\\./solution['\\\"]" "$test"; then
+              echo "Tests must import from ./solution: $test"
+              exit 1
+            fi
+
+            if ! search_quiet "\\bexport\\b" "$solution"; then
+              echo "solution.ts must export the required function/class: $solution"
+              exit 1
+            fi
+
+            if ! search_quiet "solution\\.ts" "$readme" || ! search_quiet "solution\\.test\\.ts" "$readme"; then
+              echo "README must list solution.ts and solution.test.ts: $readme"
               exit 1
             fi
           done

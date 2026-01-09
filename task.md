@@ -15,6 +15,41 @@
 - Fix required: LC-001 twoSum must return [] when no solution; do not throw.
 - Fix required: README file lists must name actual files (solution.ts, solution.test.ts), not placeholders.
 - Fix required: solution.ts must include time/space complexity comments per task requirements.
+- Fix required: README must include a "Files" section listing solution.ts and solution.test.ts.
+- Fix required: Tests must import from node:assert/strict and must import the solution export.
+
+## Example Format (Follow Exactly)
+
+### solution.ts (snippet)
+```
+// Time Complexity: O(n)
+// Space Complexity: O(n)
+export function twoSum(nums: number[], target: number): number[] {
+  // ...
+  return [];
+}
+```
+
+### solution.test.ts (snippet)
+```
+import assert from 'node:assert/strict';
+import { twoSum } from './solution';
+
+function runTest(name: string, input: [number[], number], expected: number[]): void {
+  const result = twoSum(...input);
+  assert.deepStrictEqual(result, expected, name);
+  console.log(`✓ ${name}`);
+}
+
+runTest('sample', [[2, 7, 11, 15], 9], [0, 1]);
+```
+
+### README.md (snippet)
+```
+## Files
+- solution.ts
+- solution.test.ts
+```
 
 ---
 
