@@ -7,6 +7,22 @@
 - solution.ts must export the required function/class and include time/space complexity comments.
 - README must include a "Files" section listing solution.ts and solution.test.ts.
 
+## Example (Must Follow)
+
+### solution.test.ts
+```
+import assert from 'node:assert/strict';
+import { twoSum } from './solution';
+
+function runTest(name: string, input: [number[], number], expected: number[]): void {
+  const result = twoSum(...input);
+  assert.deepStrictEqual(result, expected, name);
+  console.log(`✓ ${name}`);
+}
+
+runTest('sample', [[2, 7, 11, 15], 9], [0, 1]);
+```
+
 ---
 
 ## Tasks
