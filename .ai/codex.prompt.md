@@ -1,21 +1,24 @@
-## Mission
-Read task.md, find ALL Status: TODO tasks, and implement them under problems/**.
+## Your Mission
+1. Read task.md from the repository root
+2. Identify ALL tasks with Status: TODO
+3. Implement each TODO task sequentially
+4. Create solution files under problems/** directory
 
-## Hard Rules
-- Only modify/create files under problems/**.
-- Follow task requirements exactly (language, complexity, tests).
-- Use real newlines (no literal "\n").
-- Tests must use node:assert/strict; no describe/it/test/expect.
-- Tests must import the solution via named export from ./solution.
-- solution.ts must export required function/class and include time/space complexity comments.
-- README must have a "Files" section listing solution.ts and solution.test.ts.
-- Do not modify task.md or create/change tasks.
-- Do not open a PR with empty/missing files.
+## Rules
+- ONLY modify or create files under problems/**
+- Follow the exact requirements in each task (language, complexity, etc.)
+- Use clear variable names and add comments for time/space complexity
+- Do NOT modify task.md or task descriptions
+- Do NOT create new tasks or change requirements
 
-## Minimal Test Pattern
-import assert from 'node:assert/strict';
-import { fn } from './solution';
-// run tests directly with assert + console output
+## Output Structure
+For each task (e.g., LC-001 Two Sum):
+```
+problems/001-two-sum/
+├── solution.ts          # Main implementation
+├── solution.test.ts     # Test cases (if needed)
+└── README.md           # Explanation (optional)
+```
 
 ## Error Handling
 If requirements are unclear:

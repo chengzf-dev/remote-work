@@ -1,55 +1,11 @@
 # LeetCode AI Task Board (DeepSeek Supervised)
 
 ## Rules
-- Codex must complete ALL tasks with status TODO
-- Codex must NOT touch tasks marked DONE
-- DeepSeek supervisor (this project) is responsible for reviewing Codex PRs
-- Fix required: previous PR only added codex-output.md; you must generate solution files under problems/** for every TODO task
-- Fix required: PR #3 still only added codex-output.md; do not open a PR without problems/** solutions
-- Fix required: PR #4 added empty 0-byte solution files. Implement real code + tests; empty files are not acceptable.
-- Fix required: PR #7 wrote literal "\\n" characters into files. Use real newlines; files must be valid TypeScript.
-- Fix required: Tests must run with plain Node (use node:assert/strict). Do not use Jest unless you add the runner (not allowed here).
-- Fix required: Correct test case for LC-560: nums [2,-1,2,-1], k=2 should return 3, not 4.
-- Fix required: Do not use describe/it/test/expect; write standalone Node tests with assert and console output.
-- Fix required: Ensure all solutions export the required functions/classes so tests can import them.
-- Fix required: LC-001 twoSum must return [] when no solution; do not throw.
-- Fix required: README file lists must name actual files (solution.ts, solution.test.ts), not placeholders.
-- Fix required: solution.ts must include time/space complexity comments per task requirements.
-- Fix required: README must include a "Files" section listing solution.ts and solution.test.ts.
-- Fix required: Tests must import from node:assert/strict and must import the solution export.
-
-## Example Format (Follow Exactly)
-
-### solution.ts (snippet)
-```
-// Time Complexity: O(n)
-// Space Complexity: O(n)
-export function twoSum(nums: number[], target: number): number[] {
-  // ...
-  return [];
-}
-```
-
-### solution.test.ts (snippet)
-```
-import assert from 'node:assert/strict';
-import { twoSum } from './solution';
-
-function runTest(name: string, input: [number[], number], expected: number[]): void {
-  const result = twoSum(...input);
-  assert.deepStrictEqual(result, expected, name);
-  console.log(`✓ ${name}`);
-}
-
-runTest('sample', [[2, 7, 11, 15], 9], [0, 1]);
-```
-
-### README.md (snippet)
-```
-## Files
-- solution.ts
-- solution.test.ts
-```
+- Complete ALL tasks with Status: TODO; do NOT touch DONE.
+- Use real newlines (no literal "\\n" in files).
+- Tests must use node:assert/strict and no test runner (no describe/it/test/expect).
+- solution.ts must export the required function/class and include time/space complexity comments.
+- README must include a "Files" section listing solution.ts and solution.test.ts.
 
 ---
 
