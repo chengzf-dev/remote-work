@@ -1,0 +1,1 @@
+import assert from 'node:assert/strict';\nimport { twoSum } from './solution';\n\nfunction runTest(name: string, input: [number[], number], expected: number[]): void {\n  const result = twoSum(...input);\n  assert.deepStrictEqual(result, expected, name);\n  console.log('✓ ' + name);\n}\n\nrunTest('sample', [[2, 7, 11, 15], 9], [0, 1]);\nrunTest('not found', [[1, 2, 3], 7], []);\n
