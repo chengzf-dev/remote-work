@@ -1,7 +1,8 @@
 # LeetCode AI Task Board (DeepSeek Supervised)
 
 ## Rules
-- Complete ALL tasks with Status: TODO; do NOT touch DONE.
+- Codex must complete ALL tasks with status TODO
+- Codex must NOT touch tasks marked DONE
 - Use real newlines (no literal "\\n" in files).
 - Tests must use node:assert/strict and no test runner (no describe/it/test/expect).
 - solution.ts must export the required function/class and include time/space complexity comments.
@@ -54,4 +55,4 @@ runTest('sample', [[2, 7, 11, 15], 9], [0, 1]);
   - Include time & space complexity comments
   - Add at least 4 test cases (including edge cases: both empty, one empty, equal length, different lengths)
 
-<!-- Trigger workflow (6) -->
+<!-- Trigger workflow (8) -->
