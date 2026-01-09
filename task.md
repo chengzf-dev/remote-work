@@ -51,5 +51,6 @@ runTest('sample', [[2, 7, 11, 15], 9], [0, 1]);
 - Path: problems/020-valid-parentheses
 - Completed: 2026-01-07
 - Notes: Stack-based O(n) solution with 5 comprehensive test cases
+- Fix: Use real newlines (no literal "\\n") in solution.ts, solution.test.ts, README.md; ensure solution.ts exports isValid; include 5 comprehensive test cases
 
 <!-- Trigger workflow (15) --> 
