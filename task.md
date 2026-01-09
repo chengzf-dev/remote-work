@@ -52,4 +52,4 @@ runTest('sample', [[2, 7, 11, 15], 9], [0, 1]);
 - Completed: 2026-01-07
 - Notes: Stack-based O(n) solution with 5 comprehensive test cases
 
-<!-- Trigger workflow (8) -->
+<!-- Trigger workflow (9) -->
