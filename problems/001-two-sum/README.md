@@ -1,0 +1,1 @@
+# Files\n- solution.ts\n- solution.test.ts\n\n## Explanation\nThis solution implements the Two Sum algorithm utilizing a hash map to achieve O(n) time complexity for querying and inserting elements. The function finds indices of the two numbers that add up to a specified target. \n

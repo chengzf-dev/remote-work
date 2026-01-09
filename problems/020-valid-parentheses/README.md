@@ -1,0 +1,1 @@
+# Files\n- solution.ts\n- solution.test.ts\n\n## Explanation\nThis solution checks for valid parentheses using a stack to achieve O(n) time complexity. Each opening bracket is pushed onto the stack, and on encountering a closing bracket, the top is popped for validation.\n
