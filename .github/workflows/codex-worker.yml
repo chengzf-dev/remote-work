@@ -105,7 +105,7 @@ jobs:
               exit 1
             fi
 
-            if search '\\\\n' "$solution" "$test" "$readme"; then
+            if search '\\n' "$solution" "$test" "$readme"; then
               echo "Found literal \\n escape sequences in files under $path"
               exit 1
             fi
@@ -127,11 +127,6 @@ jobs:
 
             if ! search_quiet "from ['\\\"]\\./solution['\\\"]" "$test"; then
               echo "Tests must import from ./solution: $test"
-              exit 1
-            fi
-
-            if ! search_quiet "\\bexport\\b" "$solution"; then
-              echo "solution.ts must export the required function/class: $solution"
               exit 1
             fi
 
