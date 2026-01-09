@@ -1,0 +1,1 @@
+// Time Complexity: O(n)\n// Space Complexity: O(n)\nexport function twoSum(nums: number[], target: number): number[] {\n  const map: Record<number, number> = {};\n  for (let i = 0; i < nums.length; i++) {\n    const complement = target - nums[i];\n    if (complement in map) {\n      return [map[complement], i];\n    }\n    map[nums[i]] = i;\n  }\n  return [];\n}
